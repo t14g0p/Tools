@@ -544,7 +544,7 @@ EOF
     systemctl restart mongodb.service
 
     echo -n "https://www.percona.com/blog/2016/08/12/tuning-linux-for-mongodb/"
-
+}
 
 function install_postgresql() {
     echo "[+] Installing PostgreSQL 12"
