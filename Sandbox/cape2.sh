@@ -490,7 +490,7 @@ function install_mongo(){
     echo "[+] Installing MongoDB"
 
     wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -
-    echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu $(lsb_release -cs)/mongodb-org/4.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb.list
+    echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb.list
 
     apt update 2>/dev/null
     apt install libpcre3-dev -y
@@ -544,7 +544,7 @@ EOF
     systemctl restart mongodb.service
 
     echo -n "https://www.percona.com/blog/2016/08/12/tuning-linux-for-mongodb/"
-}
+
 
 function install_postgresql() {
     echo "[+] Installing PostgreSQL 12"
